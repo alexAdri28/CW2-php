@@ -25,8 +25,9 @@ if (isset($_SESSION['id'])) {
 
        $hashed_password = password_hash( $POST["password"],PASSWORD_DEFAULT)
 
-     $sql = "INSERT INTO student(id,firstname,Lastname...)VALUES(" "," {$_POST['firstname']} "," $hashed_password "...)";
-       echo$sql; 
+     $sql = "INSERT INTO student (studentid, password, dob, firstname, lastname, house, town, county, country, postcode)
+      VALUES ('$studentid', '$password', '$dob', '$firstname', '$lastname', '$streetAddress', '$town', '$county', '$country',
+       '$postcode')";
 
       $data['content'] = "<p>Studet records can be added </p>";
 
