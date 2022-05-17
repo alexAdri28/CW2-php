@@ -31,15 +31,12 @@ if (isset($_SESSION['id'])) {
       $data['content'] = "<p>Studet records can be added </p>";
 
    }
-   
-      // using <<<EOD notation to allow building of a multi-line string
+    // using <<<EOD notation to allow building of a multi-line string
       // see http://stackoverflow.com/questions/6924193/what-is-the-use-of-eod-in-php for info
       // also http://stackoverflow.com/questions/8280360/formatting-an-array-value-inside-a-heredoc
       $data['content'] = <<<EOD
 
-   <h2>Add new Student</h2>
-
-    <-----TODO student ID-----> 
+   //<h2>Add new Student</h2>
 
    <form name="frmdetails" action="" method="post">
    First Name :
