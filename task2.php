@@ -15,14 +15,14 @@
      // $sql = "select * from studentmodules sm, module m where m.modulecode = sm.modulecode and sm.studentid = '" . $_SESSION['id'] ."';";
        $sql = "SELECT * FROM task1";
 
-      $result = mysqli_query($conn,$sql);
+     // $result = mysqli_query($conn,$sql);
 
       // prepare page content
       $data['content'] .= "<table border='1'>";
        $data['content'] .= "<tr><th>Studentid</th><th>Password</th><th>DOB</th><th>Firstname</th>
       <th>Lastname</th><th>House</th><th>Town</th><th>County</th><th>Country</th><th>Postcode</th></tr>";
       // Display the modules within the html table
-      while($row = mysqli_fetch_array($result)) {
+      //while($row = mysqli_fetch_array($result)) {
           $data['content'] .= "<td> ";
          $data['content'] .= "<td> {$row["studentid"]} </td>";
          $data['content'] .= "<td> {$row["password"]} </td>";
