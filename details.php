@@ -3,7 +3,8 @@
 include("_includes/config.inc");
 include("_includes/dbconnect.inc");
 include("_includes/functions.inc");
-
+include("css/index.html");
+include("js/index.html");
 
 // check logged in
 if (isset($_SESSION['id'])) {
@@ -26,12 +27,12 @@ if (isset($_SESSION['id'])) {
       $result = mysqli_query($conn,$sql);
 
       $data['content'] = "<p>Your details have been updated</p>";
-  }
-    
-  else {
+
+   }
+   else {
       // Build a SQL statment to return the student record with the id that
       // matches that of the session variable.
-      $sql = "select * from student where studentid='". $_SESSION['id'] . "';";
+      $sql = "select * from student where studentid='". $_SESSION['id'] . "'; ";
       $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_array($result);
 
@@ -42,20 +43,13 @@ if (isset($_SESSION['id'])) {
 
    <h2>My Details</h2>
    <form name="frmdetails" action="" method="post">
-   First Name :
-   <input name="txtfirstname" type="text" value="{$row['firstname']}" /><br/>
-   Surname :
-   <input name="txtlastname" type="text"  value="{$row['lastname']}" /><br/>
-   Number and Street :
-   <input name="txthouse" type="text"  value="{$row['house']}" /><br/>
-   Town :
-   <input name="txttown" type="text"  value="{$row['town']}" /><br/>
-   County :
-   <input name="txtcounty" type="text"  value="{$row['county']}" /><br/>
-   Country :
-   <input name="txtcountry" type="text"  value="{$row['country']}" /><br/>
-   Postcode :
-   <input name="txtpostcode" type="text"  value="{$row['postcode']}" /><br/>
+   First Name :   <input name="txtfirstname" type="text" value="{$row['firstname']}" /><br/>
+   Surname :   <input name="txtlastname" type="text"  value="{$row['lastname']}" /><br/>
+   Number and Street :   <input name="txthouse" type="text"  value="{$row['house']}" /><br/>
+   Town :   <input name="txttown" type="text"  value="{$row['town']}" /><br/>
+   County :   <input name="txtcounty" type="text"  value="{$row['county']}" /><br/>
+   Country :   <input name="txtcountry" type="text"  value="{$row['country']}" /><br/>
+   Postcode :   <input name="txtpostcode" type="text"  value="{$row['postcode']}" /><br/>
    <input type="submit" value="Save" name="submit"/>
    </form>
 
@@ -66,7 +60,9 @@ EOD;
    // render the template
    echo template("templates/default.php", $data);
 
-} else {
+}
+ else
+ {
    header("Location: index.php");
 }
 
