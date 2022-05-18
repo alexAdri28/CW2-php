@@ -26,9 +26,9 @@ if (isset($_SESSION['id'])) {
       $result = mysqli_query($conn,$sql);
 
       $data['content'] = "<p>Your details have been updated</p>";
-
-   }
-   else {
+  }
+    
+  else {
       // Build a SQL statment to return the student record with the id that
       // matches that of the session variable.
       $sql = "select * from student where studentid='". $_SESSION['id'] . "';";
