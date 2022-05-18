@@ -4,9 +4,10 @@
    include("_includes/dbconnect.inc");
    include("_includes/functions.inc");
    
-  require_once 'vendor/autoload.php';
   
-       for ($i = 0; $i <5; $i++)
+  
+    if (isset($_GET['return'])) {
+        for ($i = 0; $i <5; $i++)
    {
       $studentid = $faker->numberBetween(20000001, 99999999);
       $password = password_hash($faker->password(), PASSWORD_DEFAULT);
@@ -27,8 +28,6 @@
 
        $result = mysqli_query($conn, $sql);
    }
-
-   if (isset($_GET['return'])) {
     }
 		 
 
