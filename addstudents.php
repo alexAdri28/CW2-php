@@ -15,17 +15,9 @@ if (isset($_SESSION['id'])) {
    if (isset($_POST['submit'])) {
       
        var_dump($_POST);
+      $hashed_password = password_hash( $POST["password"],PASSWORD_DEFAULT)
 
-       // add validation 
-       // if (filds empty)
-       // display an error message
-
-       //$POST["password"]
-       // TODO: hash the password 
-
-       $hashed_password = password_hash( $POST["password"],PASSWORD_DEFAULT)
-
-     $sql = "INSERT INTO student (studentid, password, dob, firstname, lastname, house, town, county, country, postcode)
+     $sql = "INSERT INTO students (studentid, password, DOB, firstname, lastname, house, town, county, country, postcode)
       VALUES ('$studentid', '$password', '$dob', '$firstname', '$lastname', '$streetAddress', '$town', '$county', '$country',
        '$postcode')";
 
@@ -37,7 +29,7 @@ if (isset($_SESSION['id'])) {
       // also http://stackoverflow.com/questions/8280360/formatting-an-array-value-inside-a-heredoc
       $data['content'] = <<<EOD
 
-   //<h2>Add new Student</h2>
+   <h2>Add new Student</h2>
 
    <form name="frmdetails" action="" method="post">
    First Name :
