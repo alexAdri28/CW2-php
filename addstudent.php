@@ -11,6 +11,7 @@ if (isset($_SESSION['id']))
    echo template("templates/partials/nav.php");
 // Build SQL statment that selects a student's database
 // Build sql statment that selects all the modules
+if(isset($_POST['Submit'])){
 ?>
 
 
@@ -46,4 +47,4 @@ echo template("templates/partials/footer.php");
 
 
 
-?>
+
