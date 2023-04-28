@@ -41,18 +41,83 @@ if (isset($_SESSION['id'])) {
       // also http://stackoverflow.com/questions/8280360/formatting-an-array-value-inside-a-heredoc
       $data['content'] = <<<EOD
 
-   <h2>My Details</h2>
+      <h1 class="mt-5"> My Details</h1>
+   
    <form name="frmdetails" action="" method="post">
-   First Name :   <input name="txtfirstname" type="text" value="{$row['firstname']}" /><br/>
-   Surname :   <input name="txtlastname" type="text"  value="{$row['lastname']}" /><br/>
-   Number and Street :   <input name="txthouse" type="text"  value="{$row['house']}" /><br/>
-   Town :   <input name="txttown" type="text"  value="{$row['town']}" /><br/>
-   County :   <input name="txtcounty" type="text"  value="{$row['county']}" /><br/>
-   Country :   <input name="txtcountry" type="text"  value="{$row['country']}" /><br/>
-   Postcode :   <input name="txtpostcode" type="text"  value="{$row['postcode']}" /><br/>
-   <input type="submit" value="Save" name="submit"/>
-   </form>
-
+  <div class="col-md-6">
+    <label for="validationCustom01" class="form-label">First name</label>
+    <input type="text" class="form-control" id="validationCustom01" name="firstName" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationCustom02" class="form-label">Last name</label>
+    <input type="text" class="form-control" id="validationCustom02" name="lastName" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationCustomUsername" class="form-label">Number of house and street name</label>
+    <input type="text" class="form-control" id="validationCustomUsername" name="streetAddress" required>
+    <div class="invalid-feedback">
+      Please enter the number of the house and the name of the street.
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationCustom03" class="form-label">City</label>
+    <select class="form-select" id="validationCustom04" name="City" required>
+    <option value="">Choose your City</option>
+    <option value="England">England</option>
+    <option value="Scoland">Scoland</option>
+    <option value="Wales">Wales</option>
+    <option value="North Irland">North Irland</option>
+    
+  </select>
+    <div class="invalid-feedback">
+      Please provide a valid city.
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationCustom04" class="form-label">Country</label>
+    <select class="form-select" id="validationCustom04" name="country" required>
+      <option value="">Choose your country</option>
+      <option value="USA">USA</option>
+      <option value="Canada">Canada</option>
+      <option value="Mexico">Mexico</option>
+      <option value="UK">UK</option>
+      <option value="France">France</option>
+      <option value="Germany">Germany</option>
+      <option value="Spain">Spain</option>
+      <option value="Italy">Italy</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid country.
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationCustom05" class="form-label">Postcode</label>
+    <input type="text" class="form-control" id="validationCustom05" name="postcode" required>
+    <div class="invalid-feedback">
+      Please provide a valid postcode.
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Save</button>
+  </div>
+</form>
 EOD;
 
    }
