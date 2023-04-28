@@ -1,7 +1,7 @@
- <h1 cl ass="mt-5"> Login</h1>
+ <h1 class="mt-5"> Login</h1>
 <?php echo $message; ?>
 
-<form name="frmLogin" action="authenticate.php" method="post"class="mt-5">
+<form name=formLogin" action="authenticate.php" method="post">
   <div class="mb-5">
     <label class="txtid"class="form-control">Student ID </label>
     <input type="text" class="form-control" id="txtid"name="txtid">
