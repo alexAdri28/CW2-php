@@ -22,7 +22,7 @@ if (isset($_SESSION['id']))
 <body >
 
 <div >
-<table class='table' table border= "1px">
+<table class="table table-dark table-hover">
 
 <thread>
 
@@ -55,7 +55,8 @@ while($row= mysqli_fetch_assoc($result)){
 
 <div class="row">
   <div class="form-group">
-    <input type="submit" name="delete"value="DELETE" class-= "btn btn-info">
+    
+<input type="button" name= "delete" value="DELETE" class="btn btn-outline-dark">
   </div>
 </div>
 </form>

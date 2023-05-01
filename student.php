@@ -17,14 +17,14 @@ if (isset($_SESSION['id']))
 <head> Existing Students Records</head>
 <body style="padding-top: 100px;" >
 <div class= "container">
-<table class='table' table border= "1px">
+<table class="table table-dark table-hover">
 <?php
 $sql = "select * from student; ";
 $result = mysqli_query($conn, $sql);
 ?>
 <tr>
 <th>#</th>
-<th>Student ID</th><th>D.O.B</th><th>First Name</th><th>Last Name</th><th>1st Line Address</th><th>Town</th><th>County</th>
+<th>Student ID</th><th>D.O.B</th><th>First Name</th><th>Last Name</th><th>Address</th><th>City</th><th>County</th>
 <th>Counrty</th><th>Post Code</th>
 </tr>
 <?php

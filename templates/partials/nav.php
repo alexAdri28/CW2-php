@@ -17,7 +17,7 @@ include("js/index.html");
         <a class="nav-link" href="modules.php">My Modules</a>
         <a class="nav-link" href="details.php"> My Details</a>
         <a class="nav-link" href="student.php">Existing Student</a>
-        <a class="nav-link" href="addstudent.html">Add New Student</a>
+        <a class="nav-link" href="addstudent.php">Add New Student</a>
         <a class="nav-link" href="studentdelete.php">Delate existing Record</a>
         <a class="nav-link" href="Logout.php">Logout</a>
         

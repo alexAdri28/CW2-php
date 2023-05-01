@@ -18,9 +18,19 @@
       $result = mysqli_query($conn,$sql);
 
       // prepare page content
-      $data['content'] .= "<table  border= 2px";
-      $data['content'] .= "<tr><th colspan='5' align='center'>Modules</th></tr>";
-      $data['content'] .= "<tr><th>Student ID</th><th>Module Code</th><th>Type</th><th>Level</th></tr>";
+     
+       $data['content'] .= "<table class='table'>";
+       $data['content'] .= "<tr><th colspan='5' align='center'>Modules</th></tr>";
+       $data['content'] .= "<table class='table'>";
+       $data['content'] .= "<thead>";
+       $data['content'] .= "<tr>";
+       $data['content'] .= "<th scope='col'>Stduent ID</th>";
+       $data['content'] .= "<th scope='col'>Module Code</th>";
+       $data['content'] .= "<th scope='col'>type </th>";
+       $data['content'] .= "<th scope='col'>Level</th>";
+
+
+      
 
       // Display the modules within the html table
       //if($checkresult >0 )
