@@ -13,6 +13,7 @@ include("js/index.html");
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
+        
         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
         <a class="nav-link" href="modules.php">My Modules</a>
         <a class="nav-link" href="details.php"> My Details</a>
