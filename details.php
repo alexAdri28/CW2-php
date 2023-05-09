@@ -45,29 +45,29 @@ if (isset($_SESSION['id'])) {
    
    <form name="frmdetails" action="" method="post">
   <div class="col-md-6">
-    <label for="validationCustom01" class="form-label">First name</label>
-    <input type="text" class="form-control" id="validationCustom01" name="firstName" required>
+    <label for="txtfirstname" class="form-label">First name</label>
+    <input type="text" class="form-control" id="txtfirstname" name="firstName" required>
     <div class="valid-feedback">
       Looks good!
     </div>
   </div>
   <div class="col-md-6">
-    <label for="validationCustom02" class="form-label">Last name</label>
-    <input type="text" class="form-control" id="validationCustom02" name="lastName" required>
+    <label for="txtlastname" class="form-label">Last name</label>
+    <input type="text" class="form-control" id="txtlastname" name="lastName" required>
     <div class="valid-feedback">
       Looks good!
     </div>
   </div>
   <div class="col-md-6">
-    <label for="validationCustomUsername" class="form-label">Number of house and street name</label>
-    <input type="text" class="form-control" id="validationCustomUsername" name="streetAddress" required>
+    <label for="txthouse" class="form-label">Number of house and street name</label>
+    <input type="text" class="form-control" id="txthouse" name="streetAddress" required>
     <div class="invalid-feedback">
       Please enter the number of the house and the name of the street.
     </div>
   </div>
   <div class="col-md-6">
-    <label for="validationCustom03" class="form-label">City</label>
-    <select class="form-select" id="validationCustom04" name="City" required>
+    <label for="txtcounty" class="form-label">City</label>
+    <select class="form-select" id="txtcounty name="City" required>
     <option value="">Choose your City</option>
     <option value="England">England</option>
     <option value="Scoland">Scoland</option>
@@ -80,8 +80,8 @@ if (isset($_SESSION['id'])) {
     </div>
   </div>
   <div class="col-md-6">
-    <label for="validationCustom04" class="form-label">Country</label>
-    <select class="form-select" id="validationCustom04" name="country" required>
+    <label for="txtcountry" class="form-label">Country</label>
+    <select class="form-select" id="txtcountry" name="country" required>
       <option value="">Choose your country</option>
       <option value="USA">USA</option>
       <option value="Canada">Canada</option>
@@ -97,8 +97,8 @@ if (isset($_SESSION['id'])) {
     </div>
   </div>
   <div class="col-md-6">
-    <label for="validationCustom05" class="form-label">Postcode</label>
-    <input type="text" class="form-control" id="validationCustom05" name="postcode" required>
+    <label for="txtpostcode" class="form-label">Postcode</label>
+    <input type="text" class="form-control" id="txtpostcode" name="postcode" required>
     <div class="invalid-feedback">
       Please provide a valid postcode.
     </div>
@@ -115,7 +115,7 @@ if (isset($_SESSION['id'])) {
     </div>
   </div>
   <div class="col-12">
-    <button class="btn btn-primary" type="submit">Save</button>
+  <input type="submit"name="btnsave" class="btn btn-primary" value="save"/>
   </div>
 </form>
 EOD;
