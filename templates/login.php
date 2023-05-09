@@ -1,4 +1,4 @@
- <h1 class="mt-5"> Login</h1>
+<h1 class="mt-5"> Login</h1>
 <?php echo $message; ?>
 
 <form name=formLogin" action="authenticate.php" method="post">
@@ -13,4 +13,3 @@
   
   <input type="submit"name="btnlogin" class="btn btn-primary" value="Login"/>
 </form>
-

@@ -17,11 +17,7 @@
 			text-align: center;
 		}
 
-		.logo img {
-			height: 50px;
-			width: 50px;
-			vertical-align: middle;
-		}
+		
 
 		.add-student-btn {
 			display: block;
@@ -91,13 +87,7 @@
 
 			$data['content'] = "<p> $welcome_message </p>";
 		} else {
-			if (isset($_GET['return'])) {
-				$msg = "";
-				if ($_GET['return'] == "fail") {
-					$msg = "Login Failed. Please try again.";
-				}
-				$data['message'] = "<p>$msg</p>";
-			}
+			header("Location: login.php");
 		}
 
 		echo template("templates/partials/header.php");

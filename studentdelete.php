@@ -12,6 +12,20 @@ if (isset($_SESSION['id']))
    echo template("templates/partials/nav.php");
 // Build SQL statment that selects a student's database
 // Build sql statment that selects all the modules
+
+  if (!empty($_POST['checkbox']))
+  {
+  for($i = 0; $i < count($_POST['checkbox']); $i++)
+  {
+    $sql= "DELETE from student where studentid ='" . $_POST['checkbox'][$i] . "';";
+    mysqli_query($conn,$sql);
+  }
+  }
+}
+else
+{
+header("Location: index.php");
+}
 ?>
 
 <html>
@@ -38,6 +52,7 @@ if (isset($_SESSION['id']))
 $sql = "select * from student; ";
 $result = mysqli_query($conn, $sql);
 $sr=1;
+echo "<form action='' method='post'>";
 while($row= mysqli_fetch_assoc($result)){
 ?>
     <tr>
@@ -46,44 +61,24 @@ while($row= mysqli_fetch_assoc($result)){
       <td><?php echo $row['town'] ;?> </td>  <td><?php echo $row['county'] ;?> </td>  <td><?php echo $row['country'] ;?> </td>
       <td><?php echo $row['postcode'] ;?> </td>
 
-  <form action="" method="post">
   <td> <input type= "checkbox" name= "checkbox[]" value=<?php echo $row['studentid'] ;?>></td>
 </tr>
-<?php $sr ++ ;}?>
+<?php $sr++;}
+
+?>
 </tbody>
 </table>
 
 <div class="row">
   <div class="form-group">
     
-<input type="button" name= "delete" value="DELETE" class="btn btn-outline-dark">
+<input type="submit" name="delete" value="DELETE" class="btn btn-outline-dark">
   </div>
 </div>
 </form>
-
-<?php
-if (isset($_POST['delete']))
-{
- $checkedcheckbox =count ($_POST['checkbox']);
- $i=0;
- while($i<$checkedcheckbox)
- {
-   $key=$_POST['checkbox'][$i];
-   $sql= "DELETE from student  where studentid ='$key';";
-   mysqli_query($conn,$sql);
-   $i++;
- }
-}
-}
-else
-{
-header("Location: index.php");
-}
-echo template("templates/partials/footer.php");
- ?>
 </div>
 
+<?php
 
-        
-</body>
-</html>
+echo template("templates/partials/footer.php");
+ ?>
